@@ -1,0 +1,169 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import "reset.css";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: rgba(234, 232, 254, 1);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 171px;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.page-head {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 68px;
+}
+
+.vd-mch-container {
+    width: 360px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 31px 27px 28px 27px;
+    margin-right: 28px;
+}
+
+.vd-mch-drinks-list {
+    text-align: center;
+}
+
+.vd-mch-drinks-container {
+    width: 94px;
+    text-align: center;
+    display: inline-block;
+    padding: 11.07px 11px 9px 13px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    font-size: 9px;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 13.03px;
+}
+
+.vd-mch-container.soldout {
+    
+}
+
+.drink-img {
+    width: 35.86px;
+    height: 64.86px;
+    margin-bottom: 6.07px;
+}
+.drink-price {
+    padding: 5px 16px;
+    margin-top: 7px;
+    background-color: rgba(99, 39, 254, 1);
+    color: white;
+    border-radius: 50px;
+}
+
+.money-container {
+    background-color: rgba(234, 232, 254, 1);
+    float: left;
+    width: 200px;
+    padding: 6px 10px 7px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.27px;
+}
+
+.money-container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.money-container [class$=txt] {
+    float: left;
+}
+
+.money-container [class$=amt] {
+    float: right;
+}
+
+.ctl-btn {
+    width: 94px;
+    height: 33px;
+    float: right;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18.82px;
+}
+
+.ctl-btn.deposit {
+    margin-top: 11px;
+}
+.input-deposit {
+    width: 200px;
+    margin-top: 11px;
+    border-radius: 4px;
+}
+
+.selected-drinks-container {
+    overflow: auto;
+    padding: 12px 18px 0px 12px;
+    margin-top: 11px;
+    background-color: rgba(234, 232, 254, 1);
+
+}
+
+.selected-drink {
+    background-color: white;
+    margin-bottom: 6px;
+    padding: 6.04px 8px 8px 10.04px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 13.03px;
+    vertical-align:
+}
+
+.selected-drink-img {
+    width: 17.93px;
+    height: 32.93px;
+    margin-right: 10.73px;
+}
+
+.selected-drink-amt {
+    float: right;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(189, 189, 189, 1);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.27px;
+    text-align: center;
+    
+}
+
+.my-bdg-container {
+    width: 360px;
+    padding: 9px 27px;
+    
+    margin-bottom: 22px;
+    background-color: white;
+}
+
+.my-drinks-container {
+    padding: 67px 31px ;
+}
