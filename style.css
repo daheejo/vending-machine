@@ -40,6 +40,9 @@ main {
 }
 
 .vd-mch-drinks-list {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
 }
 
@@ -48,14 +51,18 @@ main {
     text-align: center;
     display: inline-block;
     padding: 11.07px 11px 9px 13px;
-    border-radius: 4px;
-    border: 1px solid grey;
+    margin: 0 12px 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0 #969696;
     font-size: 9px;
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
     line-height: 13.03px;
 }
 
+.vd-mch-drinks-container.selected {
+    border: 3px solid rgba(99, 39, 254, 1);
+}
 .vd-mch-container.soldout {
     
 }
@@ -78,6 +85,7 @@ main {
     float: left;
     width: 200px;
     padding: 6px 10px 7px 10px;
+    margin-top: 8px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 14px;
@@ -103,11 +111,15 @@ main {
     float: right;
     background-color: white;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px 0 #969696;
     border-radius: 4px;
     font-weight: 500;
     font-size: 13px;
     line-height: 18.82px;
+}
+
+.ctl-btn.change-return {
+    margin-top: 8px;
 }
 
 .ctl-btn.deposit {
@@ -120,35 +132,48 @@ main {
     padding: 6px 0 8px 6px;
     margin-top: 11px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid grey;
 }
 
 .selected-drinks-container {
-    overflow: auto;
-    padding: 12px 18px 0px 12px;
+    overflow: hidden;
+    height: 106px;
+    padding: 12px 18px 12px 12px;
     float: left;
     margin-top: 11px;
     background-color: rgba(234, 232, 254, 1);
-
+    border: 1px solid grey;
+    border-radius: 4px;
 }
 
 .selected-drink {
     background-color: white;
+    width: 170px;
     margin-bottom: 6px;
-    padding: 6.04px 8px 8px 10.04px;
+    padding: 8px 8px 8px 10.04px;
     border-radius: 4px;
     font-size: 9px;
     font-weight: 500;
-    line-height: 13px;
+    line-height: 30px;
     
 }
 
+.selected-drink::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .selected-drink-img {
+    float:left;
     width: 17.93px;
     height: 32.93px;
     margin-right: 10.73px;
-}
 
+}
+.selected-drink-txt {
+    float: left;
+}
 .selected-drink-amt {
     float: right;
     width: 30px;
@@ -182,6 +207,7 @@ main {
 .my-bdg-container .money-container {
     width: 306px;
     display: block;
+    margin: 0;
 }
 
 .my-drinks-container {
@@ -207,6 +233,7 @@ my-drinks-txt {
     margin-bottom: 6px;
     text-align: center;
     background-color: white;
+    line-height: 30px;
 }
 
 .my-drink::after {
