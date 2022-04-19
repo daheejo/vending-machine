@@ -1,5 +1,5 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import "reset.css";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 * {
     box-sizing: border-box;
@@ -34,23 +34,24 @@ main {
 
 .vd-mch-container {
     width: 360px;
-    background-color: rgba(255, 255, 255, 1);
     padding: 31px 27px 28px 27px;
     margin-right: 28px;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .vd-mch-drinks-list {
-    width: 320px;
+    /* width: 300px; */
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
+    /* text-align: center; */
 }
 
 .vd-mch-drinks-container {
-    width: 94px;
+    height: 130px;
     text-align: center;
     display: inline-block;
-    padding: 11.07px 11px 9px 13px;
+    padding: 11.07px 11px 0 13px;
     margin: 0 12px 12px 0;
     border-radius: 10px;
     box-shadow: 0 1px 5px 0 #969696;
@@ -60,21 +61,52 @@ main {
     line-height: 13.03px;
 }
 
+.vd-mch-drinks-container:nth-child(3n) {
+    margin-right: 0;
+}
 .vd-mch-drinks-container.selected {
-    border: 3px solid rgba(99, 39, 254, 1);
+    outline: 3px solid rgba(99, 39, 254, 1);
 }
-.vd-mch-container.soldout {
-    
+.vd-mch-drinks-container.soldout {
+    position: relative;
 }
+.vd-mch-drinks-container.soldout::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -2px;
+    background-image: url(mediaquery/soldout.png);
+    width: 90px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+/* .vd-mch-drinks-container.soldout::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 100;
+    background-image: url('mediaquery/Sold-out.png');
+    width: 51px;
+    height: 27px;
+} */
 
 .drink-img {
     width: 35.86px;
     height: 64.86px;
-    margin-bottom: 6.07px;
+    /* margin-bottom: 6.07px; */
+}
+
+.drink-name {
+    font-size: 9px;
 }
 .drink-price {
     padding: 5px 16px;
     margin-top: 7px;
+    margin-bottom: 9px;
     background-color: rgba(99, 39, 254, 1);
     color: white;
     border-radius: 50px;
