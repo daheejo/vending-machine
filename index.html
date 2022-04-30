@@ -6,99 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밴딩머신</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img src="Logo_img.png" alt="밴딩머신 메인 로고" width="386px" height="164.12px" class="page-head">
-    <main>
-        <section class="vd-mch-container">
-            <h2 class="blind">밴딩머신</h2>
-            <ul class="vd-mch-drinks-list">
-                <li class="vd-mch-drinks-container selected">
-                    <img src="mediaquery/Original_Cola.png" alt="오리지널 코카콜라" class="drink-img origin-cola">
-                    <p class="drink-name">Original_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
-                <li class="vd-mch-drinks-container soldout">
-                    <img src="mediaquery/Violet_Cola.png" alt="바이올렛 콜라" class="drink-img">
-                    <p class="drink-name">Violet_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
-                <li class="vd-mch-drinks-container">
-                    <img src="mediaquery/Yellow_Cola.png" alt="옐로우 콜라" class="drink-img">
-                    <p class="drink-name">Yellow_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
-                <li class="vd-mch-drinks-container">
-                    <img src="mediaquery/Cool_Cola.png" alt="쿨 콜라" class="drink-img">
-                    <p class="drink-name">Cool_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
-                <li class="vd-mch-drinks-container selected">
-                    <img src="mediaquery/Green_Cola.png" alt="그린 콜라" class="drink-img">
-                    <p class="drink-name">Green_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
-                <li class="vd-mch-drinks-container">
-                    <img src="mediaquery/Orange_Cola.png" alt="오렌지 콜라" class="drink-img">
-                    <p class="drink-name">Orange_Cola</p>
-                    <div class="drink-price">1000원</div>
-                </li>
+    <main id="app">
+        <h1 class="colacola-logo">colacola</h1>
+        <section class="vending-machine">
+            <h2 class="ir">콜라 리스트</h2>
+            <ul class="cola-list-cont">
+                <li><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
+                <li class="soldout"><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
+                <li><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
+                <li><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
+                <li><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
+                <li><button class="cola-item" type="button">
+                    <img src="mediaquery/Original_Cola.png" alt="">
+                    <strong class="cola-txt">Original Cola</strong>
+                    <span class="cola-price">1000원</span>
+                </button></li>
             </ul>
-            <article class="money-container">
-                <p class="money-txt">잔액:</p>
-                <p class="money-amt">1,000원</p>
-            </article>
-            <button class="ctl-btn change-return">거스름돈 반환</button>
-            <input class="input-deposit"type="number" placeholder="입금액 입력">
-            <button class="ctl-btn deposit">입금</button>
-            <ul class="selected-drinks-container">
-                <li class="selected-drink">
-                    <img class="selected-drink-img"src="mediaquery/Original_Cola.png" alt="선택된 오리지널 코카콜라">
-                    <p class="selected-drink-txt">Original_Cola</p>
-                    <div class="selected-drink-amt">1</div>
-                </li>
-                <li class="selected-drink">
-                    <img class="selected-drink-img"src="mediaquery/Green_Cola.png" alt="선택된 그린 코카콜라">
-                    <p class="selected-drink-txt">Green_Cola</p>
-                    <div class="selected-drink-amt">2</div>
-                </li>
-            </ul>
-            <button class="get-btn">획득</button>
-        </section>
-        <section class="my">
-            <section class="my-bdg-container">
-                <article class="money-container">
-                    <h2 class="money-txt">소지금:</h2>
-                    <strong class="money-amt">25,000 원</strong>
+            <section class="buy-cont">
+                <h2 class="ir">콜라 구입하기</h2>
+                <div class="money-info left">
+                    잔액:
+                    <span class="money-amt">1,000원</span>
+                </div>
+                <button class="ctl-btn return" type="button">거스름돈 반환</button>
+
+                <input class="deposit-input" type="number" placeholder="입금액 입력">
+                <button class="ctl-btn deposit" type="button">입금</button>
+
+                <article class="cola-cont">
+                    <ul class="cola-list selected">
+                        <li><button class="selected-item">
+                            <img class="cola-li-img" src="mediaquery/Orange_Cola.png" alt="">
+                            <strong class="cola-txt">Original_Cola</strong>
+                            <data class="cola-amt">1</data></button>
+                        </li>
+                        <li><button class="selected-item">
+                            <img class="cola-li-img" src="mediaquery/Orange_Cola.png" alt="">
+                            <strong class="cola-txt">Original_Cola</strong>
+                            <data class="cola-amt">2</data></button>
+                        </li>
+                    </ul>
                 </article>
+                <button class="get-btn" type="button">획득</button>
             </section>
-            <section class="my-drinks-container">
-                <h2 class="my-drinks-txt">획득한 음료</h2>
-                <ul class="my-drinks-list">
-                    <li class="my-drink">
-                        <img class="my-drink-img"src="mediaquery/Original_Cola.png" alt="나의 오리지널 코카콜라">
-                        <p class="my-drink-txt">Original_Cola</p>
-                        <div class="my-drink-amt">1</div>
+        </section>
+        <section class="my-info">
+            <h2 class="ir">나의 소지금 정보</h2>
+            <article class="my-money-cont">
+                <div class="money-info my-money">
+                    소지금:
+                    <span class="money-amt">25,000원</span>
+                </div>
+            </article>
+            <section class="my-drinks-cont">
+                <h2 class="my-drinks-tit">획득한 음료</h2>
+                <ul class="cola-list my-cola">
+                    <li>
+                        <button class="selected-item my-item">
+                        <img class="cola-li-img" src="mediaquery/Orange_Cola.png" alt="">
+                        <strong class="cola-txt">Original_Cola</strong>
+                        <data class="cola-amt">2</data>
+                        </button>
                     </li>
-                    <li class="my-drink">
-                        <img class="my-drink-img"src="mediaquery/Green_Cola.png" alt="나의 그린 코카콜라">
-                        <p class="my-drink-txt">Green_Cola</p>
-                        <div class="my-drink-amt">2</div>
-                    </li>
-                    <li class="my-drink">
-                        <img class="my-drink-img"src="mediaquery/Orange_Cola.png" alt="나의 오렌지 코카콜라">
-                        <p class="my-drink-txt">Orange_Cola</p>
-                        <div class="my-drink-amt">1</div>
-                    </li>
-                    <li class="my-drink">
-                        <img class="my-drink-img"src="mediaquery/Violet_Cola.png" alt="나의 바이올렛 코카콜라">
-                        <p class="my-drink-txt">Violet_Cola</p>
-                        <div class="my-drink-amt">5</div>
+                    <li>
+                        <button class="selected-item my-item">
+                        <img class="cola-li-img" src="mediaquery/Orange_Cola.png" alt="">
+                        <strong class="cola-txt">Original_Cola</strong>
+                        <data class="cola-amt">1</data>
+                        </button>
                     </li>
                 </ul>
-                <p class="my-drink-ttl-price">총금액 : 9,000원</p>
+                <strong class="ttl-money-txt">
+                    총금액:
+                    <data class="ttl-money-amt">9,000원</data>
+                </strong>
+            </section>
         </section>
-    </section>
     </main>
 </body>
 </html>
