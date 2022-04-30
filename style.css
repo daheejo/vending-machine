@@ -1,5 +1,4 @@
 @charset 'uft-8';
-@import "reset.css";
 
 
 body {
@@ -11,6 +10,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0 28px;
+    font-family: 'Noto Sans KR', sans-serif !important;
 }
 
 #app .colacola-logo {
@@ -47,6 +47,7 @@ body {
 
 .cola-list-cont .cola-item {
     padding: 11px 0 9px;
+    width: 100%;
     text-align: center;
     background-color: white;
     border: none;
@@ -78,6 +79,7 @@ body {
     line-height: 13px;
     margin: 6px 0 7px;
     font-size: 9px;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
 }
 
@@ -93,7 +95,7 @@ body {
 }
 
 .cola-list-cont li.soldout {
-    /* position:relative; */
+    position:relative;
 }
 .cola-list-cont li.soldout::after {
     content: '';
@@ -152,6 +154,7 @@ body {
     box-sizing: border-box;
     border: none;
     outline: 1px solid #bdbdbd;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .buy-cont .ctl-btn {
@@ -160,9 +163,9 @@ body {
     border-radius: 5px;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
     box-sizing: border-box;
-    padding: 6px 0;
     font-size: 13px;
     font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .get-btn {
@@ -214,6 +217,7 @@ body {
     line-height: 33px;
     margin-left: 10px;
     font-size: 9px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .cola-amt {
@@ -225,14 +229,13 @@ body {
     height: 30px;
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
     border: 1px solid rgba(189, 189, 189, 1);
     border-radius: 5px;
 }
 
 
-#app .my-info {
-    
-}
+/* my-info */
 
 .my-info .my-money-cont {
     background-color: white;
@@ -257,13 +260,6 @@ body {
     padding: 26px 23px 54px;
 }
 
-.my-drinks-cont::after {
-    content: '';
-    display: block;
-    clear: both;
-    /* clear-flx */
-}
-
 .my-drinks-tit {
     display: block;
     text-align: center;
@@ -285,32 +281,28 @@ body {
 .cola-list.my-cola li {
     background-color: white;
     padding: 8px;
+    border-radius: 5px;
 }
 
 .cola-list.my-cola li .my-item {
     padding: 0;
     width: 100%;
+
 }
 .cola-list.my-cola li .cola-txt {
     float: left;
     margin-left: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .cola-list.my-cola li+li {
     margin-top: 6px;
 }
-.cola-list.my-cola li::after {
-    content: '';
-    display: block;
-    clear: both;
-    /* clear-flx */
-}
-
 
 .ttl-money-txt {
     float: right;
     font-size: 12px;
     font-weight: 500;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
 /* 반응형 */
@@ -324,5 +316,10 @@ body {
 
     #app .vending-machine {
         margin-top: 150px;
+    }
+
+    .buy-cont .deposit-input {
+       text-align: right;
+       
     }
 }
