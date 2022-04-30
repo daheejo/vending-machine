@@ -1,4 +1,5 @@
 # vending-machine
+- URL: https://daheejo.github.io/vending-machine/
 - 미디어쿼리를 이용하여 반응형 웹페이지를 만드는 과제입니다.
 - 추후 자바스크립트를 이용해 다음과 같은 기능을 추가할 계획입니다.
 
