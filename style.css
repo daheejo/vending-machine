@@ -2,8 +2,6 @@
 @import "reset.css";
 
 
-
-
 body {
     background-color: rgba(234, 232, 254, 1);
 }
@@ -40,6 +38,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
+    text-align: center;
 }
 
 .cola-list-cont li{
@@ -149,9 +148,10 @@ body {
 .buy-cont .deposit-input {
     grid-column: 1/3;
     padding: 7px 10px;
-    border: 1px soild #bdbdbd;
     border-radius: 5px;
     box-sizing: border-box;
+    border: none;
+    outline: 1px solid #bdbdbd;
 }
 
 .buy-cont .ctl-btn {
@@ -202,6 +202,7 @@ body {
 }
 .cola-list.selected li .selected-item {
     padding: 0;
+    width: 100%;
 }
 .cola-li-img {
     float: left;
@@ -216,11 +217,10 @@ body {
 }
 
 .cola-amt {
+    float: right;
     display: flex;
     justify-content: center;
     align-items: center;
-    float: right;
-    margin-left: 30px;
     width: 30px;
     height: 30px;
     font-size: 14px;
@@ -289,6 +289,7 @@ body {
 
 .cola-list.my-cola li .my-item {
     padding: 0;
+    width: 100%;
 }
 .cola-list.my-cola li .cola-txt {
     float: left;
@@ -304,9 +305,7 @@ body {
     /* clear-flx */
 }
 
-.cola-list.my-cola li .cola-amt{
-    margin-left: 131px;
-}
+
 .ttl-money-txt {
     float: right;
     font-size: 12px;
