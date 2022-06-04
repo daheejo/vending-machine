@@ -8,7 +8,7 @@ colaItems.forEach(item=>item.addEventListener('click',(e)=>{
     console.log(e.target)
     clickCnt++
     // console.log(colaListSelected)
-    // console.log(item.innerText.split('\n')[0])
+    console.dir(item.innerText)
     const selectedItemLi = document.createElement('li')
     const selectedItemBtn = document.createElement('button')
     selectedItemBtn.setAttribute('class','selected-item')
@@ -46,19 +46,44 @@ colaItems.forEach(item=>item.addEventListener('click',(e)=>{
 
 
 //입금액 입금시 소지금 누적
+// let depositInput = document.querySelector('.deposit-input')
+// const depositBtn = document.querySelector('.ctl-btn.deposit')
+// let myMoneyAmt = document.querySelector('.money-info.my-money .money-amt')
+// depositBtn.addEventListener('click',()=>{
+//     if (!myMoneyAmt.textContent && depositInput.value){
+//         myMoneyAmt.textContent = `${depositInput.value}원`;
+//         depositInput.value=''
+//     } else if (!depositInput.value) {
+//         alert('입금액을 입력하세요.')
+//     }else {
+//         myMoneyAmt.textContent = `${parseInt(depositInput.value) + parseInt(myMoneyAmt.textContent)}원`
+//         depositInput.value=''
+
+//     }
+// })
+
+//입금 기능
 let depositInput = document.querySelector('.deposit-input')
 const depositBtn = document.querySelector('.ctl-btn.deposit')
 let myMoneyAmt = document.querySelector('.money-info.my-money .money-amt')
+let depositLeft = document.querySelector('.money-info.left .money-amt')
 
 depositBtn.addEventListener('click',()=>{
-    if (!myMoneyAmt.textContent && depositInput.value){
-        myMoneyAmt.textContent = `${depositInput.value}원`;
+    if(depositInput.value){//소지금에서 잔액 차감
+        myMoneyAmt.textContent = `${parseInt(myMoneyAmt.textContent)-parseInt(depositInput.value)}`
+        if (!depositLeft.textContent) { //잔액이 없는 경우
+        depositLeft.textContent = `${depositInput.value}`
         depositInput.value=''
-    } else if (!depositInput.value) {
-        alert('입금액을 입력하세요.')
-    }else {
-        myMoneyAmt.textContent = `${parseInt(depositInput.value) + parseInt(myMoneyAmt.textContent)}원`
-        depositInput.value=''
-
+        } else { //잔액이 있는 경우
+            depositLeft.textContent = `${parseInt(depositLeft.textContent) + parseInt(depositInput.value)}`
+        }
+    } else {
+        alert('입금액을 입력하세요!')
     }
 })
+
+//콜라 클릭 시 잔액 차감
+colaItems.forEach(item => item.addEventListener('click',()=>{
+    depositLeft.textContent = `${parseInt(depositLeft)}-${parseInt(item.dataset.price)}`
+})
+)
