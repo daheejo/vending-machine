@@ -1,8 +1,5 @@
 # vending-machine: Colacola 자판기
-- URL: https://daheejo.github.io/vending-machine/
-- 추후 자바스크립트를 이용해 다음과 같은 기능을 추가할 계획입니다.
+![image](https://user-images.githubusercontent.com/74031552/179001112-d32fd5ec-0d36-45af-941b-27f5f037950c.png)
 
-1. 판매할 음료에 대한 데이터 활용
-2. 돈의 임금에 따른 음료 선택
-3. 거스름돈 반환
-4. 일반적인 자판기와 같은 원리로 버튼을 누르면 상품 추가
+- URL: https://daheejo.github.io/vending-machine/<br>
+<p>피그마를 이용해서 디자이너와 협업하여 시안을 정확히 반영하고, 시멘틱한 태그를 사용해 웹접근성에 알맞은 페이지 구현 방법에 대해 배웠습니다.</p>
